@@ -1,0 +1,102 @@
+<odoo>
+  <data>
+
+    <record id="Sales_Commission_settings_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sale.commission</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+                <xpath expr="//div[@name ='catalog_setting_container']" position="after">
+                        <h2>Sales Commission</h2>
+                    <div class="row mt16 o_settings_container" name="commission_setting_container">
+                        <div class="col-12 col-lg-6 o_setting_box" id="Commissions_calculating_sale" title="Sale Commission management">
+                            <div class="o_setting_right_pane">
+                                <label for="commission_calc"/>
+                                <div class="text-muted">
+                                     Default Method is Sales Team
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="commission_calc" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+ </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box" id="Commissions_sale" title="Sale Commission management">
+
+                            <div class="o_setting_right_pane">
+                                <label for="sales_commission_setting"/>
+                                <div class="text-muted">
+                                     Default Method is Customer Invoice Payment
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="sales_commission_setting" class="o_light_label" widget="radio"/>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="sales_commission.list">
+      <field name="name">sales_commission list</field>
+      <field name="model">sales_commission.sales_commission</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="sales_commission.action_window">
+      <field name="name">sales_commission window</field>
+      <field name="res_model">sales_commission.sales_commission</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sales_commission.action_server">
+      <field name="name">sales_commission server</field>
+      <field name="model_id" ref="model_sales_commission_sales_commission"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="sales_commission" id="sales_commission.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="sales_commission.menu_1" parent="sales_commission.menu_root"/>
+    <menuitem name="Menu 2" id="sales_commission.menu_2" parent="sales_commission.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sales_commission.menu_1_list" parent="sales_commission.menu_1"
+              action="sales_commission.action_window"/>
+    <menuitem name="Server to list" id="sales_commission" parent="sales_commission.menu_2"
+              action="sales_commission.action_server"/>
+-->
+  </data>
+</odoo>
