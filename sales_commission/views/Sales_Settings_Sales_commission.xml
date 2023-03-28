@@ -22,6 +22,18 @@
                                 </div>
                             </div>
  </div>
+                      <div class="col-xs-12 col-md-6 o_setting_box" id="sale_manager_comm" title="Sale Commission management">
+                        <div class="o_setting_right_pane">
+                          <label for="sale_manager_comm"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="sale_manager_comm"  />
+                                    </div>
+                                </div>
+
+                            </div>
+                         </div>
+
                         <div class="col-xs-12 col-md-6 o_setting_box" id="Commissions_sale" title="Sale Commission management">
 
                             <div class="o_setting_right_pane">
@@ -34,9 +46,20 @@
                                         <field name="sales_commission_setting" class="o_light_label" widget="radio"/>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
 
+
+                            </div>
+                            </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box" id="sale_manager_comm" title="Sale Commission management">
+                        <div class="o_setting_right_pane">
+                            <label for="sale_person_comm"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="sale_person_comm"  />
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
 
                     </div>
                 </xpath>
