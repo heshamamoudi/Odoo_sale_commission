@@ -3,10 +3,6 @@
 from odoo import models, fields, api
 
 
-class SaleCommission(models.Model):
-    _name = 'sales.commission'
-
-
 class salesCommissionSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
